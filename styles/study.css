@@ -1,0 +1,53 @@
+#wrap {
+    width:402px; height:874px;
+    background-color: aqua;
+    padding:45px 15px;
+    border-right:2px solid #000;
+}
+#wrap > header {
+    border-bottom:1px solid #000;
+    margin-bottom:40px;
+}
+#wrap > header > .top {}
+#wrap > header > .top > h1 {}
+#wrap > header > .top > h1 > a {
+    font-size:1.125em;
+    font-weight:700;
+}
+#wrap > header > .top > .right {}
+#wrap > header > .top > .right > .search_btn {
+    margin-right:8px;
+}
+#wrap > header > .top > .right > .search_btn > img {}
+#wrap > header > .top > .right > .all_menu_btn {}
+#wrap > header > .top > .right > .all_menu_btn > img {}
+/* 2행(전체, 오늘 보기메뉴) */
+#wrap > header > nav {
+    padding-bottom:10px;
+}
+#wrap > header > nav > .all {
+    margin-right:12px;
+    font-size:1.125em;
+    color:#aaa;
+}
+#wrap > header > nav > .all > .num {
+    color:#aaa;
+}
+#wrap > header > nav > .today {
+    font-size:1.125em;
+    color:#aaa;
+}
+#wrap > header > nav > .today > .num {
+    color:#aaa;
+}
+#wrap > header > nav > .active {
+    font-weight:700;
+    color:#000;
+}
+#wrap > header > nav > .active > .num {
+    font-weight:700;
+    color:#000;
+}
+
+
+

@@ -7,10 +7,13 @@
     <meta name="description" content="">
     <title>To-Do-list</title>
     <!-- 웹글꼴 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- 디자인 -->
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/reset.css"> <!-- ★reset 먼저작성! -->
+    <!-- <link rel="stylesheet" href="./styles/index.css"> -->
+    <link rel="stylesheet" href="./styles/study.css">
 </head>
 <body>
     <div id="wrap">
@@ -26,11 +29,36 @@
             <!-- 2행(전체, 오늘 보기메뉴) -->
             <nav> 
                 <a href="#" class="all active">All<span class="num">(3)</span></a>
-                <a href="#" class="today">All<span class="num">(0)</span></a>
+                <a href="#" class="today">Today<span class="num">(0)</span></a>
             </nav>
         </header>
         <main>
-
+            <!-- 3행 1.날짜~할일 목록 리스트 -->
+            <ul class="to_do_list">
+                <li>
+                    <a href="#" class="date">05.12</a>
+                    <a href="#" class="contents">매일 책 15분 읽기 목표</a>
+                </li>
+                <li>
+                    <a href="#" class="date">05.12</a>
+                    <a href="#" class="contents">매일 책 15분 읽기 목표</a>
+                </li>
+                <li>
+                    <a href="#" class="date">05.12</a>
+                    <a href="#" class="contents">매일 책 15분 읽기 목표</a>
+                </li>
+                <li>
+                    <a href="#" class="date">05.12</a>
+                    <a href="#" class="contents">매일 책 15분 읽기 목표</a>
+                </li>
+            </ul>
+            <!-- 3행 2.글쓰기 버튼 -->
+            <a href="#" class="write_popup_btn"><img src="./images/write_btn.svg" alt="새로운 글쓰기"></a>
+            <!-- 3행 3.글쓰기버튼 클릭 시 실행화면(입력화면) -->
+            <div class="write_popup">
+                <p class="info">add a new task</p>
+                <a href="#" class="write_btn"><img src="./images/complete_btn.svg" alt="글쓰기 등록"></a>
+            </div>
         </main>
     </div><!-- e:#wrap -->
 </body>

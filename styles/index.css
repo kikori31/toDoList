@@ -1,1 +1,77 @@
 /* index.css */
+/* 태그선택자 {속성:값;} */
+/* #아이디선택자 {속성:값;} */
+/* .클래스선택자 {속성:값;} */
+/* 부모선택자 > 자식선택자 {속성:값;} */
+/* 형제선택자 + 인접형제선택자 {속성:값;} */
+/* 형제선택자 ~ 뒤에모든형제들 {속성:값;} */
+#wrap {
+    width:402px; /* css 숫자입력 시 단위작성하기 */
+    height:874px;
+    background-color: aqua;
+    /* 안쪽여백, 피그마 오토레이아웃 패딩과 동일 */
+    /* 안쪽여백 패딩을 4방향 각각 넣는 법 */
+    /* padding-left:15px;
+    padding-right:15px;
+    padding-top:45px;
+    padding-bottom:45px; */
+    /* 패딩 값 1개 작성 시 - 전체 방향 적용 */
+    /* padding:45px; */
+    /* 패딩 값 2개 작성 시 - 상하/좌우 방향 적용 */
+    padding:45px 15px;
+    /* 패딩 값 3개 작성 시 - 상/좌우/하 방향 적용 */
+    /* padding:45px 15px 45px; */
+    /* 패딩 값 4개 작성 시 - 12/3/6/9 시계방향 적용 */
+    /* padding:45px 15px 45px 15px; */
+    /* 테두리 적용 문법 border:두께 모양 색상; */
+    border-right:2px solid #000;
+    /* border-right:2px dashed #000; */
+    /* border-right:2px dotted #000; */
+    /* border-right:2px double #000; */
+}
+/* ========================================header 1행 */
+#wrap > header {
+    border-bottom:1px solid #000;
+    margin-bottom: 40px;
+}
+#wrap > header >.top {}
+#wrap > header >.top > h1 {}
+#wrap > header >.top > h1 > a { /* 글자꾸미기는 가장 글자에 가까운 선택자에 작성 */
+    font-size:1.125em;
+    font-weight:700; /* Regular(400) 굵기 종류에 따라 +-100 */
+    /* reset.css의 초기화 설정값에 따라 작성 유무 결정하기(적용값과 초기값이 같으면 생략) */
+}
+#wrap > header >.top > .right {}
+#wrap > header >.top > .right > .search_btn {
+    margin-right:8px;
+}
+#wrap > header >.top > .right > .search_btn > img {}
+#wrap > header >.top > .right > .all_menu_btn {}
+#wrap > header >.top > .right > .all_menu_btn > img {}
+/* ========================================header 2행 */
+#wrap > header > nav {
+    padding-bottom:10px;
+}
+#wrap > header > nav > .all {
+    /* 자간, 행간, 글꼴 reset 초기값과 동일하므로 생략 */
+    font-size:1.125em; color:#aaa;
+    margin-right:12px;
+}
+#wrap > header > nav > .all > .num {
+    color:#aaa;
+}
+#wrap > header > nav > .today {
+    font-size:1.125em;
+    color:#aaa;
+}
+#wrap > header > nav > .today > .num {
+    color:#aaa;
+}
+#wrap > header > nav > .active {
+    font-weight:700;
+    color:#000;
+} /* 활성화기준 대상 */
+#wrap > header > nav > .active > .num {
+    font-weight:700;
+    color:#000;
+}
