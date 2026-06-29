@@ -34,7 +34,11 @@
     border-bottom:1px solid #000;
     margin-bottom: 40px;
 }
-#wrap > header >.top {}
+#wrap > header >.top {
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+}
 #wrap > header >.top > h1 {}
 #wrap > header >.top > h1 > a { /* 글자꾸미기는 가장 글자에 가까운 선택자에 작성 */
     font-size:1.125em;
@@ -75,3 +79,51 @@
     font-weight:700;
     color:#000;
 }
+/* =================================main */
+#wrap > main {}
+/* =================================main 1행 날짜~할일 목록 리스트 */
+#wrap > main > .to_do_list {
+    background-color: yellow;
+    display:flex;
+    flex-flow:column-reverse nowrap;
+    /* gap:10px;  */
+    /* 2개이상의 자식사이 바깥쪽여백(간격) 적용(margin효과동일) */
+    /* 실제 웹&앱 서비스를 이용하는 사용자가 작성하는 내용은 항상 부모의 마지막 자식 위치로 삽입된다. 개발자가 '반전' 설정을 하지 않으면 무조건 아래로 쌓인다는 뜻. 내용이 많을수록 점점 보기 불편해지는 상황이 생기므로 축 반전을 통해 사용자가 작성한 마지막글이 '첫 글'이 되되록 프로그래밍을 작성해야한다. */
+}
+#wrap > main > .to_do_list > li {
+    background-color: lime;
+    /* 자식 date, contents를 정렬하고 여백을 띄우기 위해 부모(li) flex적용 */
+    display:flex;
+    /* display:flex 외에 나머지 속성은 순서 상관 없음. */
+    flex-flow:row nowrap; /* 메인축(수평) 줄바꿈(x) */
+    gap:16px;
+    border-bottom:1px solid rgba(0,0,0,0.5);
+    padding:12px 0;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+#wrap > main > .to_do_list > li > * {
+    letter-spacing: -0.02em;
+    /* 글자크기 16, 행간 100%,글꼴 reset 기본값 생략 */
+    /* font-family:'pretendard', sans-serif; */
+}
+#wrap > main > .to_do_list > li > .date {
+    font-weight:600;
+}
+#wrap > main > .to_do_list > li > .contents {}
+/* =============================글쓰기팝업 */
+#wrap > main > .write_popup {
+    background-color: yellow;
+    display:flex;
+    flex-flow:column nowrap;
+    width:288px; height:208px;
+    justify-content: space-between;
+    /* align-items:flex-end; 자식 모두에게 주고 싶은 경우 */
+    padding:20px;
+}
+#wrap > main > .write_popup > .info {}
+#wrap > main > .write_popup > .write_btn {
+    align-self:flex-end;/* 자식한테만 개별로 적용하고 싶은 경우 */
+    width:42px;
+}
+#wrap > main > .write_popup > .write_btn > img {width:100%}
