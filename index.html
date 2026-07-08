@@ -13,6 +13,7 @@
     <!-- 디자인 -->
     <link rel="stylesheet" href="./styles/reset.css"> <!-- ★reset 먼저작성! -->
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/index.js" defer></script>
     <!-- <link rel="stylesheet" href="./styles/study.css"> -->
 </head>
 <body>
@@ -133,12 +134,14 @@
                 </li>
             </ul>
             <!-- 3행 2.글쓰기 버튼 -->
-            <a href="#" class="write_popup_btn"><img src="./images/write_btn.svg" alt="새로운 글쓰기"></a>
+            <button class="write_popup_btn" onclick="popupShow()"><img src="./images/write_btn.svg" alt="새로운 글쓰기"></button>
             <!-- 3행 3.글쓰기버튼 클릭 시 실행화면(입력화면) -->
             <div class="write_popup">
-                <p class="info">add a new task</p>
-                <a href="#" class="write_btn"><img src="./images/complete_btn.svg" alt="글쓰기 등록"></a>
+                <input type="text" class="info" placeholder="add a new task">
+                <button class="write_btn" ><img src="./images/complete_btn.svg" alt="글쓰기 등록"></button>
             </div>
+            <!-- 4. 글쓰기 팝업 뒤 배경 -->
+            <div class="popup_bg" onclick="popupHide()"></div>
         </main>
     </div><!-- e:#wrap -->
 </body>
